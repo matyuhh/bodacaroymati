@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+<div class="container">
+    <section>
+        <div id="imagenJuntos">
+            <img id="indeximagen" src="{% static '/bodapp/images/caroymati1.jpg' %}" alt="Caro y Mati" style="width:500px;height:500px;">
+        </div>
+        <div id="introJuntos">            
+            <div id="bodaJuntos">
+                <h3>VENI A CELEBRAR NUESTRA BODA</h3>
+            </div>
+            <div id="nombresSecundario">
+                <hr>
+                <div>
+                    <h2>CAROLINA BLANZACO</h2>
+                    <P>- y -</P>
+                    <h2>MATIAS GUTIÉRREZ</h2>
+                </div>
+                <hr>
+            </div>
+            <div id="fechaJuntos">
+                <h3>JUEVES, MARZO 18, 2021</h3>
+            </div>
+            <div id="textoJuntos">
+                <P>Si bien la pandemia demoro este momento que estaba planeado para Octubre del 2020, los invitamos a formar parte de este momento especial de una forma poco peculiar.</P>
+            </div>
+        </div>
+</section>
+</div>
+{% endblock %}

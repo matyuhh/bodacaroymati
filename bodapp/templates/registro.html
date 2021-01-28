@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+    <div class="container">
+        <section>
+            <div id="imagenJuntos">
+                <img src="https://i0.wp.com/www.silocreativo.com/wp-content/uploads/2018/01/imagen-aleatoria-destacada.png?fit=666%2C370&quality=100&strip=all&ssl=1" alt="">
+            </div>
+            <div id="seccionConfirmacion">            
+                <form method="POST">
+                    
+                    {% csrf_token %}
+                    <div class="container">
+                        <form method="POST">
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="nombre">Nombre:</label>
+                            </div>
+                            <div class="col-75">
+                              {{ form.nombre }}
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="apellido">Apellido:</label>
+                            </div>
+                            <div class="col-75">
+                              {{ form.apellido }}
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="email">Email:</label>
+                            </div>
+                            <div class="col-75">
+                              {{ form.email }}
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="si_viene">Viene con invitado?</label>
+                            </div>
+                            <div class="col-75">
+                              {{ form.si_viene }}
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="extra_invitado">Nombre y apellido del invitado: </label>
+                            </div>
+                            <div class="col-75">
+                              {{ form.extra_invitado }}
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="mensaje">Alguna solicitud o consideración?:</label>
+                            </div>
+                            <div class="col-75">
+                              {{ form.mensaje }}
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-25">
+                                <p></p>
+                              </div>
+                              <div class="col-75">
+                                <input id="boton_submit" type="submit" value="Enviar">
+                              </div>
+                          </div>
+                        </form>
+                      </div> 
+                    
+                </form>                   
+            </div>
+        </section>
+    </div>
+{% endblock %}
